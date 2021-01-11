@@ -23,14 +23,14 @@ class Home extends StatelessWidget {
         leading: IconButton(
           icon: Icon(Icons.menu),
           tooltip: 'nevigration',
-          onPressed: () => debugPrint('点击了菜单'),
+          onPressed: () => debugPrint('点击了图标的菜单'),
         ),
         title: Text("有点泛黄的App"),
         actions: <Widget>[
           IconButton(
             icon: Icon(Icons.search),
             tooltip: 'search',
-            onPressed: () => debugPrint('点击了搜索'),
+            onPressed: () => debugPrint('点击了图标的搜索'),
           ),
         ],
         elevation: 0.0,

@@ -9,7 +9,7 @@ class LiveViewDemo extends StatelessWidget {
       child: Column(
         children: <Widget>[
           Image.network(posts[index].imageUrl),
-          SizedBox(height: 16.0),
+          SizedBox(height: 8.0),
           Text(
             posts[index].title,
             style: Theme.of(context).textTheme.bodyText1,

@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import './demo/listview_demo.dart';
 
@@ -9,7 +10,11 @@ class App extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Home(),
-      theme: ThemeData(primarySwatch: Colors.yellow),
+      theme: ThemeData(
+        primarySwatch: Colors.yellow,
+        highlightColor: Color.fromRGBO(255, 255, 255, 0.5),
+        splashColor: Colors.white70,
+      ),
     );
   }
 }
@@ -27,7 +32,7 @@ class Home extends StatelessWidget {
             tooltip: 'nevigration',
             onPressed: () => debugPrint('侧边栏菜单'),
           ),
-          title: Text("泛黄的App"),
+          title: Text("alitabaApp"),
           actions: <Widget>[
             IconButton(
               icon: Icon(Icons.search),
@@ -40,7 +45,6 @@ class Home extends StatelessWidget {
             unselectedLabelColor: Colors.black38,
             indicatorColor: Colors.black54,
             indicatorSize: TabBarIndicatorSize.label,
-            indicatorWeight: 1.0,
             tabs: <Widget>[
               Tab(icon: Icon(Icons.local_florist)),
               Tab(icon: Icon(Icons.local_activity)),
@@ -54,6 +58,52 @@ class Home extends StatelessWidget {
             Icon(Icons.local_activity, size: 128, color: Colors.black),
             Icon(Icons.local_airport, size: 128, color: Colors.black),
           ],
+        ),
+        drawer: Drawer(
+          child: ListView(
+            padding: EdgeInsets.zero,
+            children: [
+              DrawerHeader(
+                child: Text('header'.toUpperCase()),
+                decoration: BoxDecoration(
+                  color: Colors.black12,
+                ),
+              ),
+              ListTile(
+                title: Text(
+                  'message',
+                  textAlign: TextAlign.right,
+                ),
+                trailing: Icon(
+                  Icons.message,
+                  color: Colors.black12,
+                  size: 18.0,
+                ),
+              ),
+              ListTile(
+                title: Text(
+                  'Favorite',
+                  textAlign: TextAlign.right,
+                ),
+                trailing: Icon(
+                  Icons.favorite,
+                  color: Colors.black12,
+                  size: 18.0,
+                ),
+              ),
+              ListTile(
+                title: Text(
+                  'Settings',
+                  textAlign: TextAlign.right,
+                ),
+                trailing: Icon(
+                  Icons.settings,
+                  color: Colors.black12,
+                  size: 18.0,
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );

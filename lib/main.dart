@@ -25,7 +25,7 @@ class Home extends StatelessWidget {
           tooltip: 'nevigration',
           onPressed: () => debugPrint('侧边栏菜单'),
         ),
-        title: Text("有点泛黄的App"),
+        title: Text("泛黄的App"),
         actions: <Widget>[
           IconButton(
             icon: Icon(Icons.search),

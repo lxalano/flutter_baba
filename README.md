@@ -1,7 +1,8 @@
-# flutterbaba
+# flutter_baba
 
-A new Flutter application.
-
+这是我的第一个Flutter项目使用VsCode编辑器上传
+这也是学习Git的第一步操作
+人到中年要坚强！
 ## Getting Started
 
 This project is a starting point for a Flutter application.

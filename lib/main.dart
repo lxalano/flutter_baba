@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import './demo/listview_demo.dart';
+import './demo/drawer_demo.dart';
 
 void main() => runApp(App());
 
@@ -20,6 +21,7 @@ class App extends StatelessWidget {
 }
 
 class Home extends StatelessWidget {
+  int _currentIndex = 0;
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
@@ -27,11 +29,6 @@ class Home extends StatelessWidget {
       child: Scaffold(
         backgroundColor: Colors.grey[100],
         appBar: AppBar(
-          leading: IconButton(
-            icon: Icon(Icons.menu),
-            tooltip: 'nevigration',
-            onPressed: () => debugPrint('侧边栏菜单'),
-          ),
           title: Text("alitabaApp"),
           actions: <Widget>[
             IconButton(
@@ -59,51 +56,29 @@ class Home extends StatelessWidget {
             Icon(Icons.local_airport, size: 128, color: Colors.black),
           ],
         ),
-        drawer: Drawer(
-          child: ListView(
-            padding: EdgeInsets.zero,
-            children: [
-              DrawerHeader(
-                child: Text('header'.toUpperCase()),
-                decoration: BoxDecoration(
-                  color: Colors.black12,
-                ),
-              ),
-              ListTile(
-                title: Text(
-                  'message',
-                  textAlign: TextAlign.right,
-                ),
-                trailing: Icon(
-                  Icons.message,
-                  color: Colors.black12,
-                  size: 18.0,
-                ),
-              ),
-              ListTile(
-                title: Text(
-                  'Favorite',
-                  textAlign: TextAlign.right,
-                ),
-                trailing: Icon(
-                  Icons.favorite,
-                  color: Colors.black12,
-                  size: 18.0,
-                ),
-              ),
-              ListTile(
-                title: Text(
-                  'Settings',
-                  textAlign: TextAlign.right,
-                ),
-                trailing: Icon(
-                  Icons.settings,
-                  color: Colors.black12,
-                  size: 18.0,
-                ),
-              ),
-            ],
-          ),
+        drawer: DrawerDemo(),
+        bottomNavigationBar: BottomNavigationBar(
+          currentIndex: _currentIndex,
+          type: BottomNavigationBarType.fixed,
+          fixedColor: Colors.black,
+          items: [
+            BottomNavigationBarItem(
+              icon: Icon(Icons.house),
+              title: Text('House'),
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.explore),
+              title: Text('Explore'),
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.list),
+              title: Text('List'),
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.person),
+              title: Text('My'),
+            ),
+          ],
         ),
       ),
     );

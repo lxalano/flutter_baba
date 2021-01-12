@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import './demo/listview_demo.dart';
 import './demo/drawer_demo.dart';
+import './demo/bottom_navigation_bar_demo.dart';
 
 void main() => runApp(App());
 
@@ -21,7 +22,6 @@ class App extends StatelessWidget {
 }
 
 class Home extends StatelessWidget {
-  int _currentIndex = 0;
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
@@ -51,35 +51,13 @@ class Home extends StatelessWidget {
         ),
         body: TabBarView(
           children: <Widget>[
-            Icon(Icons.local_florist, size: 128, color: Colors.black),
+            LiveViewDemo(),
             Icon(Icons.local_activity, size: 128, color: Colors.black),
             Icon(Icons.local_airport, size: 128, color: Colors.black),
           ],
         ),
         drawer: DrawerDemo(),
-        bottomNavigationBar: BottomNavigationBar(
-          currentIndex: _currentIndex,
-          type: BottomNavigationBarType.fixed,
-          fixedColor: Colors.black,
-          items: [
-            BottomNavigationBarItem(
-              icon: Icon(Icons.house),
-              title: Text('House'),
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.explore),
-              title: Text('Explore'),
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.list),
-              title: Text('List'),
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.person),
-              title: Text('My'),
-            ),
-          ],
-        ),
+        bottomNavigationBar: BottomNavigationBarDemo(),
       ),
     );
   }

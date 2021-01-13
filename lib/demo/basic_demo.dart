@@ -3,6 +3,48 @@ import 'package:flutter/material.dart';
 class BasicDemo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    return GestureDetector();
+  }
+}
+
+class BasicrowDemo extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      color: Colors.grey[100],
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Container(
+            child: Icon(
+              Icons.pool,
+              size: 60.0,
+              color: Colors.white,
+            ),
+            //color: Color.fromRGBO(3, 54, 255, 1.0),
+            padding: EdgeInsets.all(16.0),
+            margin: EdgeInsets.all(6.0),
+            width: 90,
+            height: 90,
+            decoration: BoxDecoration(
+              color: Color.fromRGBO(3, 54, 255, 1.0),
+              border: Border.all(
+                color: Colors.indigoAccent[100],
+                width: 3.0,
+                style: BorderStyle.solid,
+              ),
+              borderRadius: BorderRadius.circular(16.0),
+            ),
+          )
+        ],
+      ),
+    );
+  }
+}
+
+class RichTextDemo extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
     return RichText(
       text: TextSpan(
         text: '你好',

@@ -9,7 +9,7 @@ class DrawerDemo extends StatelessWidget {
         children: [
           UserAccountsDrawerHeader(
             accountName: Text('渣渣飞.性感产品、在线编码'),
-            accountEmail: Text('8319698@qq.com'),
+            accountEmail: Text('zhazhafei@gmail.com'),
             currentAccountPicture: CircleAvatar(
               backgroundImage: NetworkImage(
                   'https://i.loli.net/2021/01/12/xrE5H2lTWbPhYZQ.jpg'),

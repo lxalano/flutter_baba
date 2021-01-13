@@ -4,6 +4,7 @@ import './demo/listview_demo.dart';
 import './demo/drawer_demo.dart';
 import './demo/bottom_navigation_bar_demo.dart';
 import './demo/basic_demo.dart';
+import './demo/layout_demo.dart';
 
 void main() => runApp(App());
 
@@ -55,7 +56,8 @@ class Home extends StatelessWidget {
             LiveViewDemo(),
             //Icon(Icons.local_activity, size: 128, color: Colors.black),
             BasicDemo(),
-            Icon(Icons.local_airport, size: 128, color: Colors.black),
+            // Icon(Icons.local_airport, size: 128, color: Colors.black),
+            LayoutDemo(),
           ],
         ),
         drawer: DrawerDemo(),

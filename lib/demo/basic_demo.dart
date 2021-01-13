@@ -1,17 +1,24 @@
+import 'package:adobe_xd/adobe_xd.dart';
 import 'package:flutter/material.dart';
 
 class BasicDemo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return GestureDetector();
-  }
-}
-
-class BasicrowDemo extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
     return Container(
-      color: Colors.grey[100],
+      decoration: BoxDecoration(
+        image: DecorationImage(
+          image:
+              NetworkImage('https://i.loli.net/2021/01/13/giUk6TPMAuf2E54.jpg'),
+          alignment: Alignment.topCenter,
+          repeat: ImageRepeat.repeatX,
+          // fit: BoxFit.cover,
+          colorFilter: ColorFilter.mode(
+            Colors.indigoAccent[400].withOpacity(0.5),
+            BlendMode.hardLight,
+          ),
+        ),
+      ),
+      // color: Colors.grey[100],
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
@@ -33,7 +40,30 @@ class BasicrowDemo extends StatelessWidget {
                 width: 3.0,
                 style: BorderStyle.solid,
               ),
-              borderRadius: BorderRadius.circular(16.0),
+              //borderRadius: BorderRadius.circular(16.0),
+              boxShadow: [
+                BoxShadow(
+                  offset: Offset(12.0, 16.0),
+                  color: Color.fromRGBO(16, 20, 188, 1.0),
+                  blurRadius: 25.0,
+                  spreadRadius: -9.0,
+                ),
+              ],
+              shape: BoxShape.circle,
+              // gradient: RadialGradient(
+              //   colors: [
+              //     Color.fromRGBO(7, 102, 255, 1.0),
+              //     Color.fromRGBO(3, 28, 128, 1.0),
+              //   ],
+              // ),
+              gradient: LinearGradient(
+                colors: [
+                  Color.fromRGBO(7, 102, 255, 1.0),
+                  Color.fromRGBO(3, 28, 128, 1.0),
+                ],
+                begin: Alignment.topCenter,
+                end: Alignment.bottomCenter,
+              ),
             ),
           )
         ],

@@ -54,9 +54,7 @@ class Home extends StatelessWidget {
         body: TabBarView(
           children: <Widget>[
             LiveViewDemo(),
-            //Icon(Icons.local_activity, size: 128, color: Colors.black),
             BasicDemo(),
-            // Icon(Icons.local_airport, size: 128, color: Colors.black),
             LayoutDemo(),
           ],
         ),

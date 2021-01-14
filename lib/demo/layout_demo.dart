@@ -4,20 +4,20 @@ class LayoutDemo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        crossAxisAlignment: CrossAxisAlignment.center,
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           IconBadge(Icons.padding),
-          IconBadge(Icons.poll),
+          IconBadge(
+            Icons.poll,
+            size: 64.0,
+          ),
           IconBadge(Icons.dashboard),
         ],
       ),
     );
   }
 }
-
-
 
 class IconBadge extends StatelessWidget {
   final IconData icon;

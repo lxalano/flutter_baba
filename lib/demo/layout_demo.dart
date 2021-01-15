@@ -8,7 +8,7 @@ class LayoutDemo extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           ConstrainedBox(
-            constraints: BoxConstraints(minHeight: 200.0, maxWidth: 200.0),
+            constraints: BoxConstraints(minHeight: 200.0, maxWidth: 320.0),
             child: Container(
               color: Color.fromRGBO(6, 54, 255, 1.0),
             ),

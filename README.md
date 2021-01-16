@@ -3,6 +3,7 @@
 这是我的第一个Flutter项目使用VsCode编辑器上传<br/>
 这也是学习Git的第一步操作<br/>
 人到中年要坚强！<br/>
+学习到了第七课，Sliver<br/>
 ## Getting Started
 
 This project is a starting point for a Flutter application.

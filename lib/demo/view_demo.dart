@@ -4,21 +4,61 @@ import '../model/post.dart';
 class ViewDemo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return GridView.count(
-      crossAxisCount: 3,
-      children: [
-        Container(
-          color: Colors.green[300],
-          alignment: Alignment(0.0, 0.0),
-          child: Text(
-            'Item',
-            style: TextStyle(
-              fontSize: 26.0,
-              color: Colors.white,
-            ),
+    return GradViewBuilderDemo();
+  }
+}
+
+class GradViewBuilderDemo extends StatelessWidget {
+  Widget _gridItemBuilder(BuildContext context, int index) {
+    return Container(
+      child: Image.network(
+        posts[index].imageUrl,
+        fit: BoxFit.cover,
+      ),
+    );
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return GridView.builder(
+      padding: EdgeInsets.all(8.0),
+      itemCount: posts.length,
+      itemBuilder: _gridItemBuilder,
+      gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
+        // crossAxisCount: 2,
+        maxCrossAxisExtent: 150.0,
+        crossAxisSpacing: 0.6,
+        childAspectRatio: 0.6,
+      ),
+    );
+  }
+}
+
+class GradViewExtenDemo extends StatelessWidget {
+  List<Widget> _buildTiles(int length) {
+    return List.generate(length, (int index) {
+      return Container(
+        color: Colors.green[300],
+        alignment: Alignment(0.0, 0.0),
+        child: Text(
+          'Item $index',
+          style: TextStyle(
+            fontSize: 26.0,
+            color: Colors.white,
           ),
-        )
-      ],
+        ),
+      );
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return GridView.extent(
+      maxCrossAxisExtent: 150.0,
+      crossAxisSpacing: 16.0,
+      mainAxisSpacing: 16.0,
+      children: _buildTiles(120),
+      // scrollDirection: Axis.horizontal,
     );
   }
 }

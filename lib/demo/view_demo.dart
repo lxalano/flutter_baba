@@ -27,8 +27,8 @@ class GradViewBuilderDemo extends StatelessWidget {
       gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
         // crossAxisCount: 2,
         maxCrossAxisExtent: 150.0,
-        crossAxisSpacing: 0.6,
-        childAspectRatio: 0.6,
+        crossAxisSpacing: 8.0,
+        mainAxisSpacing: 8.0,
       ),
     );
   }

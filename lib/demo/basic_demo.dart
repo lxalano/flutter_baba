@@ -1,4 +1,3 @@
-import 'package:adobe_xd/adobe_xd.dart';
 import 'package:flutter/material.dart';
 
 class BasicDemo extends StatelessWidget {
@@ -98,7 +97,7 @@ class RichTextDemo extends StatelessWidget {
   }
 }
 
-class textDemo extends StatelessWidget {
+class TextDemo extends StatelessWidget {
   final TextStyle _textStyle = TextStyle(
     fontSize: 16.0,
   );

@@ -27,18 +27,22 @@ class _BottomNavigationBarDemoState extends State<BottomNavigationBarDemo> {
       items: [
         BottomNavigationBarItem(
           icon: Icon(Icons.house),
+          // ignore: deprecated_member_use
           title: Text('House'),
         ),
         BottomNavigationBarItem(
           icon: Icon(Icons.explore),
+          // ignore: deprecated_member_use
           title: Text('Explore'),
         ),
         BottomNavigationBarItem(
           icon: Icon(Icons.list),
+          // ignore: deprecated_member_use
           title: Text('List'),
         ),
         BottomNavigationBarItem(
           icon: Icon(Icons.person),
+          // ignore: deprecated_member_use
           title: Text('My'),
         ),
       ],
